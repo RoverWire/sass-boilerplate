@@ -1,0 +1,13 @@
+{
+  "name": "checkup-landing",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-haml2html": "^0.3.0",
+    "shelljs": "^0.5.3"
+  }
+}

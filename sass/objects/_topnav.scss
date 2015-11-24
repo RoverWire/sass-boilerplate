@@ -1,0 +1,116 @@
+.topnav {
+  width: 100%;
+  z-index: 9999;
+  font-family: $font-secondary;
+  color: $color-grey;
+  font-style: italic;
+  position: fixed;
+  background-color: $color-almost-white;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+
+  @include media ($nav-break) {
+    overflow: hidden;
+    min-height: em(50);
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  }
+
+  .logo {
+    font-family: $font-secondary;
+    line-height: em(34);
+    text-decoration: none;
+    font-size: em(30);
+    font-style: italic;
+    font-weight: 300;
+    color: $color-grey;
+
+    span {
+      font-weight: 700;
+      color: $color-purple;
+    }
+
+    @include media($nav-break) {
+      font-size: em(22);    }
+  }
+
+  .nav-header {
+    @include span-columns(4);
+
+    @media screen and (min-width: 797px) {
+      .navicon {
+        display: none;
+      }
+    }
+
+    @include media ($nav-break) {
+      @include span-columns(4);
+      display: block;
+      text-align: center;
+      @include clearfix;
+    }
+  }
+
+  .navbar {
+    @include span-columns(8);
+    line-height: em(68);
+
+    @include media ($nav-break) {
+      line-height: em(42);
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      float: right;
+
+      li {
+        float: left;
+        margin-left: em(20);
+      }
+
+      a {
+        color: $color-grey;
+        text-decoration: none;
+        font-size: em(21);
+
+        &:hover {
+          color: $color-purple;
+        }
+
+        @include media($nav-break) {
+          display: block;
+        }
+      }
+
+      .btn-purple {
+        @include button-variant($color-white, $color-purple, $color-purple);
+        @include button-size(em(15), em(20), em(18), em(28), 4px);
+        text-transform: uppercase;
+        font-size: em(11);
+
+        .fa {
+          margin-right: em(10);
+        }
+      }
+    }
+
+    @include media ($nav-break) {
+      @include span-columns(4);
+      display: none;
+
+      ul {
+        float: left;
+        width: 100%;
+
+        li {
+          width: 100%;
+          clear: both;
+          margin-left: 0;
+          text-align: center;
+          padding: em(5) 0;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

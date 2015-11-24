@@ -1,0 +1,55 @@
+.navicon {
+  float: right;
+  text-decoration: none;
+  text-indent: -9999em;
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+
+  span {
+    top: 20px;
+
+    &,
+    &:before,
+    &:after {
+      @include transition(all 0.4s ease-in-out);
+      background-color: $color-purple;
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 5px;
+      left: 0;
+    }
+
+    &:before,
+    &:after {
+      content: '';
+    }
+
+    &:before {
+      @include transform-origin(33% 100%);
+      top: -10px;
+      z-index: 10;
+    }
+
+    &:after {
+      @include transform-origin(33% 0);
+      top: 10px;
+    }
+  }
+
+  &.active {
+    span {
+      background-color: transparent;
+
+      &:before {
+        @include transform(translateY(6px) translateX(1px) rotate(45deg));
+      }
+
+      &:after {
+        @include transform(translateY(-6px) translateX(1px) rotate(-45deg));
+      }
+    }
+  }
+}

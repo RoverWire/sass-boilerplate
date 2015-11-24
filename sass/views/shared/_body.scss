@@ -1,0 +1,60 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: $color-almost-white;
+  color: $font-color;
+}
+
+.app-wrapp {
+  min-height: 100%;
+  margin-bottom: -$footer-height;
+  @include clearfix;
+
+  &:after {
+    content: '';
+    display: block;
+    height: $footer-height;
+  }
+}
+
+.wrap {
+  overflow: hidden;
+}
+
+.site-footer {
+  min-height: $footer-height;
+  background-color: $footer-background;
+}
+
+.container {
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: em(10);
+  padding-right: em(10);
+
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.purple-center {
+  color: $color-purple;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-secondary;
+}
+
+.row {
+  @include row;
+}
