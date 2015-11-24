@@ -26,7 +26,7 @@ module.exports = function(grunt) {
           noCache: true
         },
         files: {
-          'assets/stylesheets/application.css':'assets/stylesheets/application.css.scss'
+          'assets/css/application.css':'assets/sass/application.css.scss'
         }
       }
     },
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
         }
       },
       styles: {
-        files: 'assets/stylesheets/**/*.scss',
+        files: 'assets/sass/**/*.scss',
         tasks: ['sass'],
         options: {
           spawn: false,
